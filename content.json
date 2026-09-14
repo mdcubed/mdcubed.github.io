@@ -1,0 +1,241 @@
+{
+  "name": "MD³ Group",
+  "full_name": "Mechanistic Drug Design and Discovery",
+  "email": "mdcubed.ucph@gmail.com",
+  "github": "https://github.com/mdcubed",
+  "institution": "University of Copenhagen",
+  "department": "Department of Drug Design and Pharmacology",
+  "intro": "We combine structure-based drug design, molecular simulations, and free-energy methods to understand molecular mechanisms and guide therapeutic discovery.",
+  "research": [
+    {
+      "id": "mechanism-to-prediction",
+      "title": "Mechanism to prediction",
+      "description": "Connecting receptor dynamics to precision GPCR pharmacology. We combine molecular simulations and interpretable machine learning to investigate ligand selectivity, signaling bias, and the effects of genetic variants and receptor isoforms.",
+      "details": [
+        "We aim to turn dynamic molecular mechanisms into predictive descriptors of receptor function. Our approach combines membrane-embedded molecular dynamics simulations, free-energy calculations, and machine learning grounded in biophysical features. These features include time-resolved contacts, activation switches, helix motions, hydration, and allosteric communication.",
+        "Our research spans serotonin, dopamine, and histamine receptors, alongside incretin receptors and an orphan receptor. The goal is to connect simulation-derived features with experimental pharmacology and evaluate predictions on previously unseen ligands and variants."
+      ],
+      "published_example": {
+        "text": "Published work provides a practical foundation for this approach. In a collaborative study, structure–activity analysis and molecular modeling helped identify β-arrestin-biased serotonin 5-HT2A receptor agonists. These experimentally characterized ligands demonstrate how molecular insight can guide the discovery of compounds with distinct signaling profiles, supporting the feasibility of our mechanism-informed design strategy.",
+        "url": "https://doi.org/10.1021/acs.jmedchem.2c00702",
+        "label": "Poulie et al., Journal of Medicinal Chemistry (2022)"
+      }
+    },
+    {
+      "id": "photoswitchable-ligand-design",
+      "title": "Photoswitchable ligand design",
+      "description": "Toward predictive design of light-controlled ligands. We aim to combine molecular modeling, machine learning, and free-energy methods in a platform for photoswitchable ligand design.",
+      "details": [
+        "Photoswitchable ligands change their molecular configuration in response to light, offering a way to control biological activity in space and time. We are developing a computational platform to support their design and prioritization.",
+        "Our approach combines molecular modeling with data-driven predictions to compare photoswitchable candidates and guide experimental studies. The aim is to make light-controlled ligand design more predictive and accessible across biological targets."
+      ],
+      "published_example": {
+        "text": "Our published PSW-Designer platform establishes a working foundation for photoswitchable ligand design. This open-source computational platform supports the design and virtual screening of photopharmacological ligands, demonstrating that the core design workflow can be implemented and shared. Building on this result, we aim to extend predictive capabilities and broaden applications to new targets.",
+        "url": "https://doi.org/10.1021/acs.jcim.3c01050",
+        "label": "Simon et al., Journal of Chemical Information and Modeling (2023)"
+      }
+    },
+    {
+      "id": "allosteric-modulation",
+      "title": "Allosteric modulation",
+      "description": "Exploring positive and negative allosteric modulators (PAMs and NAMs) of GPCRs and neurotrophin receptors to guide selective control of cellular signaling.",
+      "details": [
+        "We investigate how positive and negative allosteric modulators (PAMs and NAMs) can enhance or reduce receptor responses. Our interests span G protein-coupled receptors (GPCRs) and neurotrophin receptors, with a focus on understanding selectivity and the modulation of neuronal signaling.",
+        "By combining molecular modeling and simulations with experimental collaborations, we aim to understand modulator action and guide the discovery of new compounds. This work explores opportunities to regulate neurotrophin signaling and neuronal plasticity, with potential relevance to brain disorders."
+      ]
+    }
+  ],
+  "people": [
+    {
+      "id": "icaro-simon",
+      "name": "Icaro Ariel Simon",
+      "role": "Principal Investigator (PI)",
+      "bio": "Icaro is a computational pharmaceutical scientist with a PhD in Pharmaceutical Sciences from the University of Copenhagen and an MSc in Chemistry from UFRGS, Brazil. His experience spans an industrial PhD at SARomics Biostructures and postdoctoral research at Vrije Universiteit Amsterdam and the University of Copenhagen. He combines receptor pharmacology, molecular simulations, free-energy calculations, and open-source tool development.",
+      "research_title": "From molecular mechanisms to predictive drug design",
+      "research": "My research asks how ligands, genetic variants, and receptor isoforms reshape molecular dynamics and signaling. I combine structure-based design, molecular dynamics, free-energy methods, and interpretable machine learning to study selectivity and signaling bias. My research program connects precision GPCR pharmacology with light-controlled ligands and allosteric modulation of GPCRs and neurotrophin receptors, aiming to translate mechanistic insight into practical design principles.",
+      "theme": "mechanism-to-prediction",
+      "photo": "assets/people/icaro-simon.png"
+    },
+    {
+      "id": "pablo-baceiredo-macho",
+      "name": "Pablo Baceiredo Macho",
+      "role": "Research Assistant",
+      "bio": "Pablo has a background in biochemistry from the Autonomous University of Madrid and training in bioinformatics and computational biology at the University of Copenhagen, supported by a “la Caixa” Foundation fellowship. His experience combines experimental neuroscience with computational structural biology, Python-based analysis, molecular dynamics, and machine learning.",
+      "research_title": "Predicting ligand- and variant-specific GPCR signaling",
+      "research": "My research connects molecular dynamics simulations with machine learning to investigate how genetic variation and ligand binding affect GPCR signaling. Focusing on dopamine receptors, the project aims to extract dynamic interaction patterns, activation features, and allosteric communication pathways that help predict functional differences across ligands, variants, and receptor isoforms.",
+      "theme": "mechanism-to-prediction",
+      "photo": "assets/people/pablo-baceiredo-macho.jpg"
+    },
+    {
+      "id": "simon-guldbrandt-kristensen",
+      "name": "Simon Guldbrandt Kristensen",
+      "role": "MSc Student",
+      "bio": "Simon is an MSc student in pharmacy interested in the intersection of pharmaceutical science and data science. Alongside his university studies, he has pursued additional Python training and developed an interest in molecular modeling and computational drug discovery. He is motivated by open science and the development of reusable research workflows.",
+      "research_title": "Structure-guided discovery of modulators of an orphan receptor",
+      "research": "My project aims to identify peptide and small-molecule modulators of an orphan receptor through structure-based modeling and pharmaceutical data science. It explores peptides derived from the receptor’s extracellular loop and uses ensemble virtual screening to identify candidate small molecules. Molecular dynamics simulations will help prioritize candidates that may stabilize inactive-like receptor conformations for experimental follow-up.",
+      "theme": "mechanism-to-prediction",
+      "photo": "assets/people/simon-guldbrandt-kristensen.jpg"
+    },
+    {
+      "id": "irem-demiray",
+      "name": "Irem Demiray",
+      "role": "MSc Student",
+      "bio": "Irem is an MSc student in Bioinformatics at the University of Copenhagen and holds a bachelor’s degree in Molecular Biology from Koç University. Her research combines molecular dynamics and structural analysis to explore receptor signaling and selectivity.",
+      "research_title": "Molecular dynamics exploration of biased signaling in two histamine receptor isoforms",
+      "research": "My project explored how receptor isoforms and ligand interactions influence biased signaling in histamine receptors. Using molecular dynamics simulations, I investigated receptor flexibility and interactions with signaling proteins to better understand the structural basis of pathway selectivity.",
+      "theme": "mechanism-to-prediction",
+      "photo": "assets/people/irem-demiray.jpeg",
+      "linkedin": "https://www.linkedin.com/in/irem-demiray-711732201/"
+    }
+  ],
+  "publications": [
+    {
+      "year": "2025",
+      "title": "A Radiolabeled Photoswitchable G Protein-Coupled Receptor Antagonist Enlightens Ligand Binding Kinetics Associated with Photoswitching",
+      "authors": "Binkhorst, L.C.P.; Josimovic, I.; De Boer, B.; Simon, I.A.; Van Der Aa, F.; Zarzycka, B.A.; De Esch, I.J.P.; Vischer, H.F.; Windhorst, A.D.; Wijtmans, M.; Leurs, R.",
+      "journal": "J. Am. Chem. Soc., 2025, 147, 27, 23991–24000.",
+      "url": "https://doi.org/10.1021/jacs.5c07349",
+      "type": "Peer-reviewed article",
+      "note": ""
+    },
+    {
+      "year": "2025",
+      "title": "Synthesis, Pharmacological Characterization, and Binding Mode Analysis of 8-Hydroxy-Tetrahydroisoquinolines as 5-HT7 Receptor Inverse Agonists",
+      "authors": "Chan, C.B.; Pottie, E.; Simon, I.A.; Rossebø, A.G.; Herth, M.M.; Harpsøe, K.; Kristensen, J.L.; Stove, C.P.; Poulie, C.B.M.",
+      "journal": "ACS Chem. Neurosci., 2025, 16, 3, 439–451.",
+      "url": "https://doi.org/10.1021/acschemneuro.4c00667",
+      "type": "Peer-reviewed article",
+      "note": ""
+    },
+    {
+      "year": "2024",
+      "title": "Pharmacological Characterization and Radiolabeling of VUF15485, a High-Affinity Small-Molecule Agonist for the Atypical Chemokine Receptor ACKR3",
+      "authors": "Zarca, A.M.; Adlere, I.; Viciano, C.P.; Arimont-Segura, M.; Meyrath, M.; Simon, I.A.; et al.",
+      "journal": "Mol. Pharmacol., 2024, 105, 4, 301–312.",
+      "url": "https://doi.org/10.1124/molpharm.123.000835",
+      "type": "Peer-reviewed article",
+      "note": ""
+    },
+    {
+      "year": "2023",
+      "title": "Ligand Selectivity Hotspots in Serotonin GPCRs",
+      "authors": "Simon, I.A.; Bjørn-Yoshimoto, W.E.; Harpsøe, K.; Iliadis, S.; Svensson, B.; Jensen, A.A.; Gloriam, D.E.",
+      "journal": "Trends Pharmacol. Sci., 2023, 44, 12, 978–990.",
+      "url": "https://doi.org/10.1016/j.tips.2023.09.012",
+      "type": "Peer-reviewed article",
+      "note": ""
+    },
+    {
+      "year": "2023",
+      "title": "PSW-Designer: An Open-Source Computational Platform for the Design and Virtual Screening of Photopharmacological Ligands",
+      "authors": "Simon, I.A.; Homan, E.J.; Wijtmans, M.; Sundström, M.; Leurs, R.; De Esch, I.J.P.; Zarzycka, B.A.",
+      "journal": "J. Chem. Inf. Model., 2023, 63, 21, 6696–6705.",
+      "url": "https://doi.org/10.1021/acs.jcim.3c01050",
+      "type": "Peer-reviewed article",
+      "note": ""
+    },
+    {
+      "year": "2023",
+      "title": "Structure–Activity Assessment and In-Depth Analysis of Biased Agonism in a Set of Phenylalkylamine 5-HT2A Receptor Agonists",
+      "authors": "Pottie, E.; Poulie, C.B.M.; Simon, I.A.; Harpsøe, K.; D'Andrea, L.; Komarov, I.V.; Gloriam, D.E.; Jensen, A.A.; Kristensen, J.L.; Stove, C.P.",
+      "journal": "ACS Chem. Neurosci., 2023, 14, 15, 2727–2742.",
+      "url": "https://doi.org/10.1021/acschemneuro.3c00267",
+      "type": "Peer-reviewed article",
+      "note": ""
+    },
+    {
+      "year": "2022",
+      "title": "Discovery of β-Arrestin-Biased 25CN-NBOH-Derived 5-HT2A Receptor Agonists",
+      "authors": "Poulie, C.B.M.; Pottie, E.; Simon, I.A.; Harpsøe, K.; D'Andrea, L.; Komarov, I.V.; Gloriam, D.E.; Jensen, A.A.; Stove, C.P.; Kristensen, J.L.",
+      "journal": "J. Med. Chem., 2022, 65, 18, 12031–12043.",
+      "url": "https://doi.org/10.1021/acs.jmedchem.2c00702",
+      "type": "Peer-reviewed article",
+      "note": ""
+    },
+    {
+      "year": "2022",
+      "title": "GPCRs Steer Gi and Gs Selectivity via TM5–TM6 Switches as Revealed by Structures of Serotonin Receptors",
+      "authors": "Huang, S.*; Xu, P.*; Shen, D.-D.*; Simon, I.A.*; Mao, C.; Tan, Y.; Zhang, H.; Harpsøe, K.; Li, H.; Zhang, Y.; et al.",
+      "journal": "Molecular Cell, 2022, 82, 2681–2695.",
+      "url": "https://doi.org/10.1016/j.molcel.2022.05.031",
+      "type": "Peer-reviewed article",
+      "note": "* Shared first authors."
+    },
+    {
+      "year": "2021",
+      "title": "Structural Insights into the Lipid and Ligand Regulation of Serotonin Receptors",
+      "authors": "Xu, P.; Huang, S.; Zhang, H.; Mao, C.; Zhou, X.E.; Cheng, X.; Simon, I.A.; Shen, D.-D.; et al.",
+      "journal": "Nature, 2021, 592, 469–473.",
+      "url": "https://doi.org/10.1038/s41586-021-03376-8",
+      "type": "Peer-reviewed article",
+      "note": ""
+    },
+    {
+      "year": "2015",
+      "title": "CuO Nanofibers Immobilized on Paraffin-Impregnated Graphite Electrode and its Application in the Amperometric Detection of Glucose",
+      "authors": "Simon, I.A.; Medeiros, N.G.; Garcia, K.C.; Soares, R.M.D.; Rosa, A.T.; Silva, J.A.",
+      "journal": "J. Braz. Chem. Soc., 2015, 26, 8, 1710–1717.",
+      "url": "https://doi.org/10.5935/0103-5053.20150145",
+      "type": "Peer-reviewed article",
+      "note": ""
+    },
+    {
+      "year": "2013",
+      "title": "Electrochemical Behavior of Gold Nanoparticles Generated In Situ on 3-(1-Imidazolyl)propyl-silsesquioxane",
+      "authors": "Simon, I.A.; Vacaro, B.B.; Nunes, M.R.; Benvenutti, E.V.; Dias, S.L.P.; Gushikem, Y.; Arguello, J.",
+      "journal": "Electroanalysis, 2013, 25, 11, 2501–2506.",
+      "url": "https://doi.org/10.1002/elan.201300130",
+      "type": "Peer-reviewed article",
+      "note": ""
+    },
+    {
+      "year": "2025",
+      "title": "Exploring a Druggable Hydrophobic Tunnel in the 5-HT2A Receptor with Potent Phenethylamines",
+      "authors": "Simon, I.A.; Pottie, E.; Harpsøe, K.; Jensen, A.A.; Kristensen, J.L.; Stove, C.P.; Poulie, C.B.M.",
+      "journal": "ChemRxiv, 2025, preprint.",
+      "url": "https://doi.org/10.26434/chemrxiv-2025-s9rhl",
+      "type": "Preprint",
+      "note": ""
+    }
+  ],
+  "news": [],
+  "bibliometrics": {
+    "as_of": "September 2026",
+    "source_note": "Google Scholar snapshot, September 2026.",
+    "scholar_url": "https://scholar.google.com/citations?user=JEFvgY4AAAAJ",
+    "metrics": [
+      {
+        "label": "Citations",
+        "value": "598",
+        "recent_value": "583"
+      },
+      {
+        "label": "h-index",
+        "value": "7",
+        "recent_value": "7"
+      },
+      {
+        "label": "i10-index",
+        "value": "7",
+        "recent_value": "6"
+      }
+    ],
+    "recent_period": "Since 2021"
+  },
+  "alumni": [
+    {
+      "years": "2025–26",
+      "name": "Pheline Remijn",
+      "institution": "Leiden University, NL",
+      "project": "Biased signaling in serotonin GPCRs",
+      "role": "MSc Student"
+    },
+    {
+      "years": "2024–25",
+      "name": "Emil Andersen",
+      "institution": "UCPH",
+      "project": "Design and synthesis of photoswitchable serotonin receptor agonists",
+      "role": "MSc Student"
+    }
+  ]
+}
