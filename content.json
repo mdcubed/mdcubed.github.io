@@ -67,6 +67,16 @@
       "photo": "assets/people/pablo-baceiredo-macho.jpg"
     },
     {
+      "id": "louise-windfeld-pedini",
+      "name": "Louise Windfeld-Pedini",
+      "role": "MSc Student",
+      "bio": "Louise is an MSc student with a background in medicinal chemistry from the University of Copenhagen. She is interested in the intersection of pharmaceutical science and neuroscience, with a focus on drug–receptor interactions. Her master’s research uses molecular dynamics and structural approaches to investigate receptor signaling.",
+      "research_title": "Biased signaling in serotonin receptors",
+      "research": "My research explores how ligands influence serotonin receptor signaling, with a focus on bias between G protein and β-arrestin pathways. I use molecular modeling and simulations to better understand the molecular basis of these differences.",
+      "theme": "mechanism-to-prediction",
+      "photo": "assets/people/louise-windfeld-pedini.png"
+    },
+    {
       "id": "simon-guldbrandt-kristensen",
       "name": "Simon Guldbrandt Kristensen",
       "role": "MSc Student",
@@ -86,6 +96,16 @@
       "theme": "mechanism-to-prediction",
       "photo": "assets/people/irem-demiray.jpeg",
       "linkedin": "https://www.linkedin.com/in/irem-demiray-711732201/"
+    },
+    {
+      "id": "julien-reissmann",
+      "name": "Julien Reißmann",
+      "role": "MSc Student",
+      "bio": "Julien is an MSc student in Biochemistry at Heinrich Heine University Düsseldorf, where he also completed his BSc. He is undertaking his master’s thesis at the Department of Drug Design and Pharmacology in Copenhagen as an Erasmus exchange student. His experience in Düsseldorf’s Computational Biochemistry group includes structure-based drug design and molecular dynamics simulations.",
+      "research_title": "Ligand-dependent signaling in class B incretin GPCRs",
+      "research": "My research explores how peptide ligands influence signaling in class B incretin GPCRs. I combine molecular dynamics simulations with data analysis to investigate the molecular basis of potency and bias between G protein and β-arrestin signaling, with the aim of informing peptide ligand design.",
+      "theme": "mechanism-to-prediction",
+      "photo": "assets/people/julien-reissmann.jpg"
     }
   ],
   "publications": [
