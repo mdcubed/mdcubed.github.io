@@ -57,3 +57,9 @@ The header, footer, and contact details link to the University of Copenhagen (ht
 `assets/cpdse-logo.svg` is the unmodified official wide gold logo downloaded from https://cpdse.dk/assets/logo_wide_gold.svg. It is displayed in a linked footer panel on all pages.
 
 Research and project descriptions use receptor-family names and generic photoswitchable ligand platform wording. Published article titles remain verbatim for bibliographic accuracy. University names within biographies and alumni entries are plain text.
+
+## Transparent artwork
+
+The header home link and lower-left footer use `assets/md3-name-transparent.png`. Its white outer background was removed with the built-in image generation tool using this prompt: “Remove only the plain white background to actual transparent alpha PNG, including white space around the artwork and text. Preserve exactly the blue cube outlines, blue M and D³, sage cube face, burgundy ΔG curve and all burgundy text. Text must remain exactly MD³ GROUP, Mechanistic Drug Design, and Discovery. Preserve original geometry, colors, lettering, composition, and Gantari typography; no added content. Small transparent padding; white cube faces may remain white.” This is an AI-edited derivative of the supplied logo.
+
+`assets/logo_cpdse.png` and `assets/research_figure_receptor.png` are copied unchanged from the supplied folder: both already contain transparent backgrounds. The receptor figure is displayed on the research page without a colored panel. The CPDSE image replaces the earlier gold SVG in the footer. The original site typography and homepage content are retained.
