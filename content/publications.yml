@@ -1,0 +1,97 @@
+# Publications. Newest first is not required — the site sorts by year.
+# Copy an entry, change the fields, save. Fields:
+#   year, title, authors, journal, url   (required)
+#   type: article | preprint             (default: article)
+#   note: free text shown under the entry (optional)
+
+- year: 2026
+  title: Exploring a Druggable Hydrophobic Tunnel in the 5-HT2A Receptor with Potent Phenethylamines
+  authors: Simon, I.A.; Pottie, E.; Jensen, M.K.; Harpsøe, K.; Jensen, A.A.; Kristensen, J.L.; Stove, C.P.; Poulie, C.B.M.
+  journal: J. Med. Chem., 2026, 69, 19, 22784–22804.
+  url: https://doi.org/10.1021/acs.jmedchem.6c01973
+  type: article
+
+- year: 2025
+  title: A Radiolabeled Photoswitchable G Protein-Coupled Receptor Antagonist Enlightens Ligand Binding Kinetics Associated with Photoswitching
+  authors: Binkhorst, L.C.P.; Josimovic, I.; De Boer, B.; Simon, I.A.; Van Der Aa, F.; Zarzycka, B.A.; De Esch, I.J.P.; Vischer, H.F.; Windhorst, A.D.; Wijtmans, M.; Leurs, R.
+  journal: J. Am. Chem. Soc., 2025, 147, 27, 23991–24000.
+  url: https://doi.org/10.1021/jacs.5c07349
+  type: article
+
+- year: 2025
+  title: Synthesis, Pharmacological Characterization, and Binding Mode Analysis of 8-Hydroxy-Tetrahydroisoquinolines as 5-HT7 Receptor Inverse Agonists
+  authors: Chan, C.B.; Pottie, E.; Simon, I.A.; Rossebø, A.G.; Herth, M.M.; Harpsøe, K.; Kristensen, J.L.; Stove, C.P.; Poulie, C.B.M.
+  journal: ACS Chem. Neurosci., 2025, 16, 3, 439–451.
+  url: https://doi.org/10.1021/acschemneuro.4c00667
+  type: article
+
+- year: 2024
+  title: Pharmacological Characterization and Radiolabeling of VUF15485, a High-Affinity Small-Molecule Agonist for the Atypical Chemokine Receptor ACKR3
+  authors: Zarca, A.M.; Adlere, I.; Viciano, C.P.; Arimont-Segura, M.; Meyrath, M.; Simon, I.A.; et al.
+  journal: Mol. Pharmacol., 2024, 105, 4, 301–312.
+  url: https://doi.org/10.1124/molpharm.123.000835
+  type: article
+
+- year: 2023
+  title: Ligand Selectivity Hotspots in Serotonin GPCRs
+  authors: Simon, I.A.; Bjørn-Yoshimoto, W.E.; Harpsøe, K.; Iliadis, S.; Svensson, B.; Jensen, A.A.; Gloriam, D.E.
+  journal: Trends Pharmacol. Sci., 2023, 44, 12, 978–990.
+  url: https://doi.org/10.1016/j.tips.2023.09.012
+  type: article
+
+- year: 2023
+  title: 'PSW-Designer: An Open-Source Computational Platform for the Design and Virtual Screening of Photopharmacological Ligands'
+  authors: Simon, I.A.; Homan, E.J.; Wijtmans, M.; Sundström, M.; Leurs, R.; De Esch, I.J.P.; Zarzycka, B.A.
+  journal: J. Chem. Inf. Model., 2023, 63, 21, 6696–6705.
+  url: https://doi.org/10.1021/acs.jcim.3c01050
+  type: article
+
+- year: 2023
+  title: Structure–Activity Assessment and In-Depth Analysis of Biased Agonism in a Set of Phenylalkylamine 5-HT2A Receptor Agonists
+  authors: Pottie, E.; Poulie, C.B.M.; Simon, I.A.; Harpsøe, K.; D'Andrea, L.; Komarov, I.V.; Gloriam, D.E.; Jensen, A.A.; Kristensen, J.L.; Stove, C.P.
+  journal: ACS Chem. Neurosci., 2023, 14, 15, 2727–2742.
+  url: https://doi.org/10.1021/acschemneuro.3c00267
+  type: article
+
+- year: 2022
+  title: Discovery of β-Arrestin-Biased 25CN-NBOH-Derived 5-HT2A Receptor Agonists
+  authors: Poulie, C.B.M.; Pottie, E.; Simon, I.A.; Harpsøe, K.; D'Andrea, L.; Komarov, I.V.; Gloriam, D.E.; Jensen, A.A.; Stove, C.P.; Kristensen, J.L.
+  journal: J. Med. Chem., 2022, 65, 18, 12031–12043.
+  url: https://doi.org/10.1021/acs.jmedchem.2c00702
+  type: article
+
+- year: 2022
+  title: GPCRs Steer Gi and Gs Selectivity via TM5–TM6 Switches as Revealed by Structures of Serotonin Receptors
+  authors: Huang, S.*; Xu, P.*; Shen, D.-D.*; Simon, I.A.*; Mao, C.; Tan, Y.; Zhang, H.; Harpsøe, K.; Li, H.; Zhang, Y.; et al.
+  journal: Molecular Cell, 2022, 82, 2681–2695.
+  url: https://doi.org/10.1016/j.molcel.2022.05.031
+  type: article
+  note: '* Shared first authors.'
+
+- year: 2021
+  title: Structural Insights into the Lipid and Ligand Regulation of Serotonin Receptors
+  authors: Xu, P.; Huang, S.; Zhang, H.; Mao, C.; Zhou, X.E.; Cheng, X.; Simon, I.A.; Shen, D.-D.; et al.
+  journal: Nature, 2021, 592, 469–473.
+  url: https://doi.org/10.1038/s41586-021-03376-8
+  type: article
+
+- year: 2015
+  title: CuO Nanofibers Immobilized on Paraffin-Impregnated Graphite Electrode and its Application in the Amperometric Detection of Glucose
+  authors: Simon, I.A.; Medeiros, N.G.; Garcia, K.C.; Soares, R.M.D.; Rosa, A.T.; Silva, J.A.
+  journal: J. Braz. Chem. Soc., 2015, 26, 8, 1710–1717.
+  url: https://doi.org/10.5935/0103-5053.20150145
+  type: article
+
+- year: 2013
+  title: Electrochemical Behavior of Gold Nanoparticles Generated In Situ on 3-(1-Imidazolyl)propyl-silsesquioxane
+  authors: Simon, I.A.; Vacaro, B.B.; Nunes, M.R.; Benvenutti, E.V.; Dias, S.L.P.; Gushikem, Y.; Arguello, J.
+  journal: Electroanalysis, 2013, 25, 11, 2501–2506.
+  url: https://doi.org/10.1002/elan.201300130
+  type: article
+
+- year: 2025
+  title: Exploring a Druggable Hydrophobic Tunnel in the 5-HT2A Receptor with Potent Phenethylamines
+  authors: Simon, I.A.; Pottie, E.; Harpsøe, K.; Jensen, A.A.; Kristensen, J.L.; Stove, C.P.; Poulie, C.B.M.
+  journal: ChemRxiv, 2025, preprint.
+  url: https://doi.org/10.26434/chemrxiv-2025-s9rhl
+  type: preprint

@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block content %}
+{% for person in people %}
+<article class="person" id="{{ person.slug }}">
+  <img class="person-photo" src="assets/people/{{ person.photo }}" alt="Portrait of {{ person.name }}" loading="lazy">
+  <div class="person-bio">
+    <p class="eyebrow">{{ person.role }}</p>
+    <h2>{{ person.name }}</h2>
+    {{ person.bio_html }}
+    {% if person.github or person.linkedin %}
+    <p class="person-links">
+      {% if person.github %}<a class="link-arrow" href="{{ person.github }}">GitHub</a>{% endif %}
+      {% if person.linkedin %}<a class="link-arrow" href="{{ person.linkedin }}">LinkedIn</a>{% endif %}
+    </p>
+    {% endif %}
+  </div>
+  {% if person.project_title %}
+  <div class="person-project">
+    <p class="project-label">{{ person.first_name }}’s research</p>
+    <h3>{{ person.project_title }}</h3>
+    {{ person.project_html }}
+    {% if person.theme_title %}<a class="link-arrow" href="research.html#{{ person.theme }}">{{ person.theme_title }}</a>{% endif %}
+  </div>
+  {% endif %}
+</article>
+{% endfor %}
+
+{% if page.alumni %}
+<section class="alumni" aria-labelledby="alumni-title">
+  <h2 id="alumni-title">Alumni</h2>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Years</th><th>Name</th><th>Role</th><th>Home institution</th><th>Project</th></tr></thead>
+      <tbody>
+        {% for person in page.alumni %}
+        <tr><td class="nowrap">{{ person.years }}</td><th scope="row">{{ person.name }}</th><td>{{ person.role }}</td><td>{{ person.institution }}</td><td>{{ person.project }}</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+{% endif %}
+{% endblock %}

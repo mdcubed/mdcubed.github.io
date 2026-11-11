@@ -1,65 +1,141 @@
-# MD³ group website
+# MD³ Group website
 
-A responsive, dependency-free research group website, inspired by the navigation and academic layout of https://elgetilab.github.io/. All HTML and CSS here are newly written; no reference-site code or imagery was copied.
+The site is written as Markdown files in `content/`. A small Python script turns
+them into the HTML in `site/`, which GitHub Pages publishes on every push to `main`.
 
-## Preview
+## Editing the site
 
-The generated website is in `site/`. Open `site/index.html` directly, or run:
+| To change… | Edit |
+|---|---|
+| Home page text | `content/home.md` |
+| A research theme | `content/research/<theme>.md` |
+| A group member | `content/people/<name>.md` |
+| Alumni | the `alumni:` list at the top of `content/people.md` |
+| Publications | `content/publications.yml` |
+| Citation numbers | the `metrics:` block at the top of `content/publications.md` |
+| News | add a file to `content/news/` |
+| Join / Contact pages | `content/join.md`, `content/contact.md` |
+| Group name, email, menu, footer | `content/site.yml` |
 
-```sh
-python3 -m http.server 8000 --directory site
+Each Markdown file starts with a short settings block between two `---` lines
+(title, order, photo…), followed by ordinary Markdown text.
+
+### Add a group member
+
+1. Put a portrait in `assets/people/` (any shape; it is cropped to 4:5, about 800 px is plenty).
+2. Copy an existing file in `content/people/` and change it:
+
+```markdown
+---
+name: Ada Lovelace
+role: PhD Student
+order: 3                        # position on the page
+photo: ada-lovelace.jpg         # file in assets/people/
+theme: mechanism-to-prediction  # file name of a research theme (optional)
+linkedin: https://…             # optional
+github: https://github.com/…    # optional
+---
+
+Short biography.
+
+## Title of the project
+
+Description of the project. Everything under the `##` heading is shown
+in the "research" column.
 ```
 
-Then visit http://localhost:8000.
+When someone leaves, delete their file and add a line to `alumni:` in `content/people.md`.
 
-## Edit
+### Add a research theme
 
-Edit `content.json` for group information, research areas, people, publications, and news. Edit `scripts/build.py` for page wording/layout, and `assets/style.css` for styling. Rebuild after changes:
+Copy a file in `content/research/`. `summary` is the short text used on the home
+page card. A Markdown quote (`> …`) is shown as a gold-ruled note, used for
+“Building on published results”.
+
+### Add a publication
+
+Copy an entry in `content/publications.yml`. The list is sorted by year
+automatically, and the three newest appear on the home page. Use
+`type: preprint` for preprints. Author names listed under `highlight_authors`
+in `content/publications.md` are shown in bold.
+
+### Add a news item
+
+Copy `content/news/_template.md` to e.g. `content/news/2026-12-01-new-paper.md`,
+then set `title` and `date`. Files starting with `_` are ignored. The latest
+three items also appear on the home page. To add a photo, put it in
+`assets/news/` and write `![Description](assets/news/photo.jpg)` in the text.
+
+### Add a new page
+
+Create `content/<name>.md` with a `title`, and add `<name>` to `nav:` in
+`content/site.yml`. To make a link look like a button, write
+`[Text](https://…){.button}`.
+
+## Preview and build
+
+One-time setup:
 
 ```sh
-python3 scripts/build.py
+python3 -m venv .venv
+.venv/bin/pip install -r requirements.txt
 ```
 
-The existing entries in `content.json` provide the content schema. People have biography and “My research” fields; research themes have summaries and detailed paragraphs; publications include DOI links, article/preprint type, and optional authorship notes. News entries use `date`, `title`, and `text`.
+Then:
 
-## Content sources and editorial choices
+```sh
+.venv/bin/python scripts/build.py --serve   # build and preview at http://localhost:8000
+```
 
-Member biographies and research summaries were prepared from the CVs and project documents in the user-provided `website_info` folder. Roles follow the user's current instructions: Icaro Ariel Simon (PI), Pablo Baceiredo Macho (research assistant), Simon Guldbrandt Kristensen (MSc student), and Irem Demiray (MSc student). Irem's biography, LinkedIn link, and research summary use `Linkedin_Irem.pdf` and `Abstract_Irem.docx`. Alumni entries follow the user-provided names, dates, affiliations, and project descriptions. The research page summarizes the 2027–2032 research plan, with future work described as aims. Individual research sections also draw on the CPDSE project applications.
+Re-run the command after each change. Without `--serve` it only builds.
+`site/` is generated — do not edit it by hand.
 
-All 12 entries from `Publication_List_Icaro_Simon_small.docx` are included: 11 journal articles and one preprint. Bibliographic details and preprint classification follow that list; publication status has not been independently refreshed. The document's inconsistent headline count was not reproduced. Abbreviated author lists and the shared-first-authorship note are retained. The page identifies these as Icaro's publications, including earlier work.
+## Design
 
-Only professional biography and research summaries are included; source CVs, applications, transcripts, personal addresses, and phone numbers are not copied into the website. News remains empty pending updates.
+Colours and type follow the group's design reference (navy, gold and cream;
+Trebuchet MS headings, Arial body; no web fonts). All colours are variables at
+the top of `assets/style.css`. Page layouts are in `templates/`.
 
-## Branding and sources
+There are two themes, dark (cream and gold on navy) and light (navy text with
+blue accents on cream). Light is the default; visitors can switch with the button in the header,
+and the choice is remembered in their browser. The default is set at the top
+of `templates/base.html`. Only
+the footer stays navy in both.
 
-- Group profile: https://github.com/mdcubed
-- Research information: https://github.com/mdcubed/.github/blob/main/profile/README.md
-- Contact email: public GitHub organization profile.
-- `assets/md3-logo.png`: downloaded from the group's public GitHub avatar; it matches the supplied cube branding. Replace with a higher-resolution original if desired.
-- Institution and department: supplied branding.
+Recurring elements: the cream→bronze ramp strip at the top of every page, the
+eyebrow (short gold rule plus uppercase label), cards with a gold top border, a
+gold left rule for notes, and one fully outlined gold box for the contact prompt.
 
-## Publish on GitHub Pages
+### Logo
 
-Create a repository named `mdcubed.github.io` under the `mdcubed` organization and push this project to its `main` branch. In the repository's **Settings → Pages**, choose **GitHub Actions** as the source. The included workflow builds and deploys `site/`. The expected address is https://mdcubed.github.io/.
+`assets/logo/` holds the cube mark recoloured to the palette:
 
-This project has not been pushed or published. Publishing requires access to the organization. It also works as a project site because internal asset and page links are relative.
+| File | Use |
+|---|---|
+| `md3-mark-dark.svg` | on navy backgrounds (used in the header and footer) |
+| `md3-mark-light.svg` | on white or cream backgrounds |
+| `md3-mark-blue.svg` | navy and blue, no gold (header of the site's light theme) |
+| `md3-mark-solid.svg` | filled cube for any background (used as the favicon) |
+| `md3-lockup-horizontal-{dark,light}.svg` | mark with “MD³ Group” and the full name |
+| `md3-lockup-stacked-{dark,light}.svg` | mark above the full name |
+| `md3-mark-original.svg` | the original blue/red artwork, kept as the source |
 
-## Profile photos and bibliometrics
+They are generated by `scripts/make_logo.py` from the original artwork; change
+the colours there and re-run it. Text in the lockups is live text set in
+Trebuchet MS — convert it to outlines before sending a lockup to a printer.
 
-Profile photos are stored in `assets/people/` and referenced by each person's `photo` field. They are displayed at their original aspect ratio.
+## Publishing
 
-The publications summary is editable under `bibliometrics` in `content.json`. Values come from `Icaro_Google_Scholar_Sept_2026.pdf`: all-time citations 598, h-index 7, i10-index 7; since 2021 citations 583, h-index 7, i10-index 6. The snapshot is dated September 2026. Update the values and `as_of` together when refreshing them. The page links to the PI’s Google Scholar profile for current metrics.
+Push to `main`. The workflow in `.github/workflows/pages.yml` installs the
+requirements, runs the build and deploys `site/` to https://mdcubed.github.io/.
+In the repository's **Settings → Pages**, the source must be **GitHub Actions**.
 
-## Institutional links
+## Sources
 
-The header, footer, and contact details link to the University of Copenhagen (https://www.ku.dk/en) and Department of Drug Design and Pharmacology (https://drug.ku.dk/). The research training section and shared footer link to CPDSE (https://cpdse.dk/).
-
-`assets/cpdse-logo.svg` is the unmodified official wide gold logo downloaded from https://cpdse.dk/assets/logo_wide_gold.svg. It is displayed in a linked footer panel on all pages.
-
-Research and project descriptions use receptor-family names and generic photoswitchable ligand platform wording. Published article titles remain verbatim for bibliographic accuracy. University names within biographies and alumni entries are plain text.
-
-## Transparent artwork
-
-The header home link and lower-left footer use `assets/md3-name-transparent.png`. Its white outer background was removed with the built-in image generation tool using this prompt: “Remove only the plain white background to actual transparent alpha PNG, including white space around the artwork and text. Preserve exactly the blue cube outlines, blue M and D³, sage cube face, burgundy ΔG curve and all burgundy text. Text must remain exactly MD³ GROUP, Mechanistic Drug Design, and Discovery. Preserve original geometry, colors, lettering, composition, and Gantari typography; no added content. Small transparent padding; white cube faces may remain white.” This is an AI-edited derivative of the supplied logo.
-
-`assets/logo_cpdse.png` and `assets/research_figure_receptor.png` are copied unchanged from the supplied folder: both already contain transparent backgrounds. The receptor figure is displayed on the research page without a colored panel. The CPDSE image replaces the earlier gold SVG in the footer. The original site typography and homepage content are retained.
+- Bibliometrics are a Google Scholar snapshot (7 November 2026). Update the
+  values and `as_of` together.
+- The publication list follows the PI's supplied list (11 articles, 1 preprint);
+  abbreviated author lists and the shared-first-author note are as supplied.
+- `assets/cpdse-logo.svg` is the official wide gold CPDSE logo from
+  https://cpdse.dk/assets/logo_wide_gold.svg, unmodified.
+- `assets/receptor.webp` is a web-sized copy of the group's receptor render.

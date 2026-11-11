@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+{% if news %}
+<div class="news-list">
+  {% for item in news %}
+  <article class="news-item" id="{{ item.slug }}">
+    <p class="news-date">{{ item.date_text }}</p>
+    <div>
+      <h2>{{ item.title }}</h2>
+      <div class="prose">{{ item.html }}</div>
+    </div>
+  </article>
+  {% endfor %}
+</div>
+{% else %}
+<p class="empty">{{ page.empty }}</p>
+{% endif %}
+{% endblock %}

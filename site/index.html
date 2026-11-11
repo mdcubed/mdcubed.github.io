@@ -1,12 +1,260 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Home | MD³ Group</title><meta name="description" content="We combine structure-based drug design, molecular simulations, and free-energy methods to understand molecular mechanisms and guide therapeutic discovery.">
-<meta name="theme-color" content="#345b76"><meta property="og:title" content="Home | MD³ Group"><meta property="og:description" content="We combine structure-based drug design, molecular simulations, and free-energy methods to understand molecular mechanisms and guide therapeutic discovery.">
-<link rel="icon" href="assets/md3-logo.png"><link rel="stylesheet" href="assets/style.css"><script defer src="assets/main.js"></script></head>
-<body><a class="skip" href="#main">Skip to content</a><div class="institution-bar"><div class="container"><a href="https://www.ku.dk/en">UNIVERSITY OF COPENHAGEN</a> <span><a href="https://drug.ku.dk/">DEPARTMENT OF DRUG DESIGN AND PHARMACOLOGY</a></span></div></div>
-<header class="container header"><a class="brand" href="index.html" aria-label="MD³ Group home"><img class="brand-lockup" src="assets/md3-name-transparent.png" width="1772" height="888" alt="MD³ Group — Mechanistic Drug Design and Discovery"></a>
-<button class="menu-toggle" aria-expanded="false" aria-controls="navigation">Menu <span aria-hidden="true">☰</span></button><nav id="navigation" aria-label="Main navigation"><a href="research.html" >Research</a><a href="people.html" >People</a><a href="publications.html" >Publications</a><a href="news.html" >News</a><a href="join.html" >Join</a><a href="contact.html" >Contact</a></nav></header>
-<main id="main"><section class="container hero"><div class="hero-copy"><p class="eyebrow">MECHANISMS. MOLECULES. MEDICINES.</p><h1>Understanding<br>mechanisms.<br><em>Designing discovery.</em></h1><p class="hero-description">We combine structure-based drug design, molecular simulations, and free-energy methods to understand molecular mechanisms and guide therapeutic discovery.</p><a class="button" href="research.html">Explore our research <span aria-hidden="true">→</span></a><a class="text-link" href="https://github.com/mdcubed">Our GitHub ↗</a></div><figure class="hero-art"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><span class="art-label top-label">MOLECULAR INSIGHT</span><img src="assets/md3-logo.png" alt="MD³ cube logo with a free-energy curve" width="460" height="460"><figcaption>Mechanistic Drug Design<br>and Discovery Group</figcaption><span class="art-label bottom-label">FROM STRUCTURE TO FUNCTION</span></figure></section>
-<section class="about-strip"><div class="container about-inner"><p class="eyebrow">THE MD³ GROUP</p><p>At the interface of <strong>computational chemistry, biophysics, and drug discovery.</strong> We seek to uncover molecular mechanisms and translate them into predictive strategies for designing better medicines.</p></div></section>
-<section class="container section"><div class="section-heading"><div><p class="eyebrow">OUR SCIENCE</p><h2>Three perspectives.<br>One molecular understanding.</h2></div><a class="text-link" href="research.html">Discover our approach →</a></div><div class="research-grid"><article class="research-card"><span class="number">01</span><h3>Mechanism to prediction</h3><p>Connecting receptor dynamics to precision GPCR pharmacology. We combine molecular simulations and interpretable machine learning to investigate ligand selectivity, signaling bias, and the effects of genetic variants and receptor isoforms.</p></article><article class="research-card"><span class="number">02</span><h3>Photoswitchable ligand design</h3><p>Toward predictive design of light-controlled ligands. We aim to combine molecular modeling, machine learning, and free-energy methods in a platform for photoswitchable ligand design.</p></article><article class="research-card"><span class="number">03</span><h3>Allosteric modulation</h3><p>Exploring positive and negative allosteric modulators (PAMs and NAMs) of GPCRs and neurotrophin receptors to guide selective control of cellular signaling.</p></article></div></section>
-<section class="container collaboration"><div><p class="eyebrow">LET’S CONNECT</p><h2>Discovery starts<br>with a conversation.</h2><p>We welcome collaborations across computational chemistry,<br class="desktop"> structural biology, pharmacology, and therapeutic discovery.</p></div><a class="button" href="mailto:mdcubed.ucph@gmail.com">Get in touch <span aria-hidden="true">↗</span></a></section></main><footer><div class="container footer-inner"><div><a class="footer-brand" href="index.html"><img src="assets/md3-name-transparent.png" width="1772" height="888" alt="MD³ Group — Mechanistic Drug Design and Discovery" loading="lazy"></a><p>Mechanistic Drug Design and Discovery<br><a href="https://drug.ku.dk/">Department of Drug Design and Pharmacology</a><br><a href="https://www.ku.dk/en">University of Copenhagen</a></p></div><div class="footer-community"><a class="cpdse-logo" href="https://cpdse.dk/"><img src="assets/logo_cpdse.png" alt="CPDSE — Center for Pharmaceutical Data Science Education" loading="lazy"></a><a class="community-link" href="https://cpdse.dk/">Pharmaceutical data science education ↗</a></div><div class="footer-links"><a href="contact.html">Contact</a><a href="https://github.com/mdcubed">GitHub ↗</a><span>© 2026 MD³ Group</span></div></div></footer></body></html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MD³ Group — Mechanistic Drug Design and Discovery</title>
+  <meta name="description" content="We combine structure-based drug design, molecular simulations, and free-energy methods to understand molecular mechanisms and guide therapeutic discovery.">
+  <meta name="theme-color" content="#0B1A33">
+  <meta property="og:title" content="Mechanistic Drug Design and Discovery | MD³ Group">
+  <meta property="og:description" content="We combine structure-based drug design, molecular simulations, and free-energy methods to understand molecular mechanisms and guide therapeutic discovery.">
+  <script>
+    /* Light is the default (data-theme on <html>); a visitor who picked the dark theme keeps it.
+       To make dark the default instead, swap 'light' and 'dark' here and on the <html> tag. */
+    try {
+      document.documentElement.dataset.theme = localStorage.getItem('theme') === 'dark' ? 'dark' : 'light';
+    } catch (e) {}
+  </script>
+  <link rel="icon" type="image/svg+xml" href="assets/logo/md3-mark-solid.svg">
+  <link rel="stylesheet" href="assets/style.css">
+  <script defer src="assets/main.js"></script>
+</head>
+<body class="page-home">
+  <a class="skip" href="#main">Skip to content</a>
+
+  <div class="ramp" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="MD³ Group home">
+        <img class="only-dark" src="assets/logo/md3-mark-dark.svg" width="624" height="716" alt="">
+        <img class="only-light" src="assets/logo/md3-mark-blue.svg" width="624" height="716" alt="">
+        <span class="brand-text">
+          <span class="brand-name">MD<sup>3</sup> Group</span>
+          <span class="brand-sub">Mechanistic Drug Design and Discovery</span>
+        </span>
+      </a>
+      <button class="theme-toggle" type="button" hidden></button>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="navigation">Menu</button>
+      <nav id="navigation" aria-label="Main navigation">
+        <a href="research.html">Research</a>
+        <a href="people.html">People</a>
+        <a href="publications.html">Publications</a>
+        <a href="news.html">News</a>
+        <a href="join.html">Join</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="hero-copy">
+      <p class="eyebrow">MD³ Group · University of Copenhagen</p>
+      <h1>Mechanistic Drug Design and Discovery</h1>
+      <p class="lead">We combine structure-based drug design, molecular simulations, and free-energy methods to understand molecular mechanisms and guide therapeutic discovery.</p>
+      <div class="actions">
+        <a class="button" href="research.html">Our research</a>
+        <a class="link-arrow" href="https://github.com/mdcubed">GitHub</a>
+      </div>
+    </div>
+    <figure class="hero-figure">
+      <img src="assets/receptor.webp" alt="Molecular rendering of a receptor with its transmembrane helices, a bound ligand, and highlighted residues" width="1100" height="1412">
+    </figure>
+  </div>
+</section>
+
+<section class="cream">
+  <div class="container statement">
+    <p class="eyebrow">The group</p>
+    <div class="statement-text"><p>At the interface of <strong>computational chemistry, biophysics, and drug discovery.</strong> We seek to uncover molecular mechanisms and translate them into predictive strategies for designing better medicines.</p></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">01 · Research</p>
+        <h2>Research themes</h2>
+      </div>
+      <a class="link-arrow" href="research.html">All research</a>
+    </div>
+    <div class="cards">
+      <a class="card" href="research.html#mechanism-to-prediction">
+        <span class="card-number">01</span>
+        <h3>Mechanism to prediction</h3>
+        <p>Connecting receptor dynamics to precision GPCR pharmacology. We combine molecular simulations and interpretable machine learning to investigate ligand selectivity, signaling bias, and the effects of genetic variants and receptor isoforms.</p>
+      </a>
+      <a class="card" href="research.html#photoswitchable-ligand-design">
+        <span class="card-number">02</span>
+        <h3>Photoswitchable ligand design</h3>
+        <p>Toward predictive design of light-controlled ligands. We aim to combine molecular modeling, machine learning, and free-energy methods in a platform for photoswitchable ligand design.</p>
+      </a>
+      <a class="card" href="research.html#allosteric-modulation">
+        <span class="card-number">03</span>
+        <h3>Allosteric modulation</h3>
+        <p>Exploring positive and negative allosteric modulators (PAMs and NAMs) of GPCRs and neurotrophin receptors to guide selective control of cellular signaling.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">02 · People</p>
+        <h2>People</h2>
+      </div>
+      <a class="link-arrow" href="people.html">Meet the group</a>
+    </div>
+    <ul class="faces">
+      <li>
+        <a href="people.html#icaro-simon">
+          <img src="assets/people/icaro-simon.jpg" alt="" loading="lazy">
+          <span class="face-name">Icaro Ariel Simon</span>
+          <span class="face-role">Principal Investigator</span>
+        </a>
+      </li>
+      <li>
+        <a href="people.html#pablo-baceiredo-macho">
+          <img src="assets/people/pablo-baceiredo-macho.jpg" alt="" loading="lazy">
+          <span class="face-name">Pablo Baceiredo Macho</span>
+          <span class="face-role">PhD Student</span>
+        </a>
+      </li>
+      <li>
+        <a href="people.html#louise-windfeld-pedini">
+          <img src="assets/people/louise-windfeld-pedini.jpg" alt="" loading="lazy">
+          <span class="face-name">Louise Windfeld-Pedini</span>
+          <span class="face-role">MSc Student</span>
+        </a>
+      </li>
+      <li>
+        <a href="people.html#simon-guldbrandt-kristensen">
+          <img src="assets/people/simon-guldbrandt-kristensen.jpg" alt="" loading="lazy">
+          <span class="face-name">Simon Guldbrandt Kristensen</span>
+          <span class="face-role">MSc Student</span>
+        </a>
+      </li>
+      <li>
+        <a href="people.html#irem-demiray">
+          <img src="assets/people/irem-demiray.jpeg" alt="" loading="lazy">
+          <span class="face-name">Irem Demiray</span>
+          <span class="face-role">MSc Student</span>
+        </a>
+      </li>
+      <li>
+        <a href="people.html#julien-reissmann">
+          <img src="assets/people/julien-reissmann.jpg" alt="" loading="lazy">
+          <span class="face-name">Julien Reißmann</span>
+          <span class="face-role">Guest Researcher</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">03 · Publications</p>
+        <h2>Recent publications</h2>
+      </div>
+      <a class="link-arrow" href="publications.html">All publications</a>
+    </div>
+    <ol class="pub-list">
+<li class="pub">
+  <span class="pub-year">2026</span>
+  <div>
+    <h3><a href="https://doi.org/10.1021/acs.jmedchem.6c01973">Exploring a Druggable Hydrophobic Tunnel in the 5-HT2A Receptor with Potent Phenethylamines</a></h3>
+    <p class="pub-authors"><strong>Simon, I.A.</strong>; Pottie, E.; Jensen, M.K.; Harpsøe, K.; Jensen, A.A.; Kristensen, J.L.; Stove, C.P.; Poulie, C.B.M.</p>
+    <p class="pub-journal">J. Med. Chem., 2026, 69, 19, 22784–22804.</p>
+  </div>
+</li><li class="pub">
+  <span class="pub-year">2025</span>
+  <div>
+    <h3><a href="https://doi.org/10.1021/jacs.5c07349">A Radiolabeled Photoswitchable G Protein-Coupled Receptor Antagonist Enlightens Ligand Binding Kinetics Associated with Photoswitching</a></h3>
+    <p class="pub-authors">Binkhorst, L.C.P.; Josimovic, I.; De Boer, B.; <strong>Simon, I.A.</strong>; Van Der Aa, F.; Zarzycka, B.A.; De Esch, I.J.P.; Vischer, H.F.; Windhorst, A.D.; Wijtmans, M.; Leurs, R.</p>
+    <p class="pub-journal">J. Am. Chem. Soc., 2025, 147, 27, 23991–24000.</p>
+  </div>
+</li><li class="pub">
+  <span class="pub-year">2025</span>
+  <div>
+    <h3><a href="https://doi.org/10.1021/acschemneuro.4c00667">Synthesis, Pharmacological Characterization, and Binding Mode Analysis of 8-Hydroxy-Tetrahydroisoquinolines as 5-HT7 Receptor Inverse Agonists</a></h3>
+    <p class="pub-authors">Chan, C.B.; Pottie, E.; <strong>Simon, I.A.</strong>; Rossebø, A.G.; Herth, M.M.; Harpsøe, K.; Kristensen, J.L.; Stove, C.P.; Poulie, C.B.M.</p>
+    <p class="pub-journal">ACS Chem. Neurosci., 2025, 16, 3, 439–451.</p>
+  </div>
+</li>    </ol>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">04 · News</p>
+        <h2>Latest news</h2>
+      </div>
+      <a class="link-arrow" href="news.html">All news</a>
+    </div>
+    <div class="news-list">
+      <article class="news-item">
+        <p class="news-date">11 November 2026</p>
+        <div><h3><a href="news.html#2026-11-11-ucph-qligfep-qresfep">A UCPH version of QligFEP and QresFEP</a></h3></div>
+      </article>
+      <article class="news-item">
+        <p class="news-date">30 October 2026</p>
+        <div><h3><a href="news.html#2026-10-30-isbuc-poster-awards">Two poster awards at the ISBUC annual meeting</a></h3></div>
+      </article>
+      <article class="news-item">
+        <p class="news-date">29 October 2026</p>
+        <div><h3><a href="news.html#2026-10-29-julien-thesis-defence">Julien defends his master’s thesis with the highest grade</a></h3></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="ask">
+      <div>
+        <h2>Collaborations and student projects</h2>
+        <p>We are always looking for master’s students interested in developing a project with us, and we are open to collaborations with other research groups and companies.</p>
+      </div>
+      <a class="button" href="mailto:mdcubed.ucph@gmail.com">Get in touch</a>
+    </div>
+  </div>
+</section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-about">
+        <img class="footer-mark" src="assets/logo/md3-mark-dark.svg" width="624" height="716" alt="" loading="lazy">
+        <p>
+          <strong>MD³ Group</strong><br>
+          Mechanistic Drug Design and Discovery<br>
+          <a href="https://drug.ku.dk/">Department of Drug Design and Pharmacology</a><br>
+          <a href="https://www.ku.dk/en">University of Copenhagen</a>
+        </p>
+      </div>
+      <a class="footer-partner" href="https://cpdse.dk/">
+        <img src="assets/cpdse-logo.svg" alt="CPDSE — Center for Pharmaceutical Data Science Education" loading="lazy">
+      </a>
+      <ul class="footer-links">
+        <li><a href="mailto:mdcubed.ucph@gmail.com">mdcubed.ucph@gmail.com</a></li>
+        <li><a href="https://github.com/mdcubed">GitHub</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="container footer-base">
+      <span>© 2026 MD³ Group</span>
+      <span>University of Copenhagen</span>
+    </div>
+  </footer>
+</body>
+</html>

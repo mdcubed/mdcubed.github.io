@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block head_aside %}
+{% if page.image %}
+<figure class="head-figure">
+  <img src="assets/{{ page.image }}" alt="{{ page.image_alt }}" width="1100" height="1412">
+  {% if page.image_caption %}<figcaption>{{ page.image_caption }}</figcaption>{% endif %}
+</figure>
+{% endif %}
+{% endblock %}
+{% block content %}
+<nav class="theme-index" aria-label="Research themes">
+  {% for theme in themes %}
+  <a href="#{{ theme.slug }}"><span>{{ '%02d' % loop.index }}</span>{{ theme.title }}</a>
+  {% endfor %}
+</nav>
+{% for theme in themes %}
+<article class="theme" id="{{ theme.slug }}">
+  <div class="theme-number" aria-hidden="true">{{ '%02d' % loop.index }}</div>
+  <div class="theme-body">
+    <h2>{{ theme.title }}</h2>
+    <p class="theme-summary">{{ theme.summary }}</p>
+    <div class="prose">{{ theme.html }}</div>
+  </div>
+</article>
+{% endfor %}
+{% if page.html %}
+<div class="theme theme-closing">
+  <div></div>
+  <div class="prose">{{ page.html }}</div>
+</div>
+{% endif %}
+{% endblock %}

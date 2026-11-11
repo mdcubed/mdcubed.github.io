@@ -1,0 +1,123 @@
+{% extends "base.html" %}
+{% block main %}
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="hero-copy">
+      <p class="eyebrow">{{ page.eyebrow }}</p>
+      <h1>{{ page.title }}</h1>
+      <p class="lead">{{ page.lead }}</p>
+      <div class="actions">
+        <a class="button" href="research.html">Our research</a>
+        <a class="link-arrow" href="{{ site.github }}">GitHub</a>
+      </div>
+    </div>
+    {% if page.image %}
+    <figure class="hero-figure">
+      <img src="assets/{{ page.image }}" alt="{{ page.image_alt }}" width="1100" height="1412">
+    </figure>
+    {% endif %}
+  </div>
+</section>
+
+<section class="cream">
+  <div class="container statement">
+    <p class="eyebrow">{{ page.about_label }}</p>
+    <div class="statement-text">{{ page.html }}</div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">01 · Research</p>
+        <h2>{{ page.themes_title }}</h2>
+      </div>
+      <a class="link-arrow" href="research.html">All research</a>
+    </div>
+    <div class="cards">
+      {% for theme in themes %}
+      <a class="card" href="research.html#{{ theme.slug }}">
+        <span class="card-number">{{ '%02d' % loop.index }}</span>
+        <h3>{{ theme.title }}</h3>
+        <p>{{ theme.summary }}</p>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">02 · People</p>
+        <h2>{{ page.people_title }}</h2>
+      </div>
+      <a class="link-arrow" href="people.html">Meet the group</a>
+    </div>
+    <ul class="faces">
+      {% for person in people %}
+      <li>
+        <a href="people.html#{{ person.slug }}">
+          <img src="assets/people/{{ person.photo }}" alt="" loading="lazy">
+          <span class="face-name">{{ person.name }}</span>
+          <span class="face-role">{{ person.role }}</span>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">03 · Publications</p>
+        <h2>{{ page.publications_title }}</h2>
+      </div>
+      <a class="link-arrow" href="publications.html">All publications</a>
+    </div>
+    <ol class="pub-list">
+      {% for pub in publications[:3] %}
+      {% include "_publication.html" %}
+      {% endfor %}
+    </ol>
+  </div>
+</section>
+
+{% if news %}
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">04 · News</p>
+        <h2>Latest news</h2>
+      </div>
+      <a class="link-arrow" href="news.html">All news</a>
+    </div>
+    <div class="news-list">
+      {% for item in news[:3] %}
+      <article class="news-item">
+        <p class="news-date">{{ item.date_text }}</p>
+        <div><h3><a href="news.html#{{ item.slug }}">{{ item.title }}</a></h3></div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<section class="section">
+  <div class="container">
+    <div class="ask">
+      <div>
+        <h2>{{ page.contact_title }}</h2>
+        <p>{{ page.contact_text }}</p>
+      </div>
+      <a class="button" href="mailto:{{ site.email }}">{{ page.contact_button }}</a>
+    </div>
+  </div>
+</section>
+{% endblock %}

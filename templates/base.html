@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if current == 'home' %}{{ site.name }} — {{ site.full_name }}{% else %}{{ page.title }} | {{ site.name }}{% endif %}</title>
+  <meta name="description" content="{{ page.lead or site.description }}">
+  <meta name="theme-color" content="#0B1A33">
+  <meta property="og:title" content="{{ page.title }} | {{ site.name }}">
+  <meta property="og:description" content="{{ page.lead or site.description }}">
+  <script>
+    /* Light is the default (data-theme on <html>); a visitor who picked the dark theme keeps it.
+       To make dark the default instead, swap 'light' and 'dark' here and on the <html> tag. */
+    try {
+      document.documentElement.dataset.theme = localStorage.getItem('theme') === 'dark' ? 'dark' : 'light';
+    } catch (e) {}
+  </script>
+  <link rel="icon" type="image/svg+xml" href="assets/logo/md3-mark-solid.svg">
+  <link rel="stylesheet" href="assets/style.css">
+  <script defer src="assets/main.js"></script>
+</head>
+<body class="page-{{ current }}">
+  <a class="skip" href="#main">Skip to content</a>
+
+  <div class="ramp" aria-hidden="true">{% for i in range(10) %}<span></span>{% endfor %}</div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="{{ site.name }} home">
+        <img class="only-dark" src="assets/logo/md3-mark-dark.svg" width="624" height="716" alt="">
+        <img class="only-light" src="assets/logo/md3-mark-blue.svg" width="624" height="716" alt="">
+        <span class="brand-text">
+          <span class="brand-name">MD<sup>3</sup> Group</span>
+          <span class="brand-sub">{{ site.full_name }}</span>
+        </span>
+      </a>
+      <button class="theme-toggle" type="button" hidden></button>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="navigation">Menu</button>
+      <nav id="navigation" aria-label="Main navigation">
+        {% for item in site.nav %}
+        <a href="{{ item.slug }}.html"{% if item.slug == current %} aria-current="page"{% endif %}>{{ item.title }}</a>
+        {% endfor %}
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    {% block main %}
+    <section class="page-head band-{{ 'b' if current in ['people', 'news', 'contact'] else 'a' }}">
+      <div class="container{% if page.image %} page-head-split{% endif %}">
+        <div>
+          <p class="eyebrow">{{ page.label or page.title }}</p>
+          <h1>{{ page.heading or page.title }}</h1>
+          {% if page.lead %}<p class="lead">{{ page.lead }}</p>{% endif %}
+        </div>
+        {% block head_aside %}{% endblock %}
+      </div>
+    </section>
+    <div class="container page-body">
+      {% block content %}{% endblock %}
+    </div>
+    {% endblock %}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-about">
+        <img class="footer-mark" src="assets/logo/md3-mark-dark.svg" width="624" height="716" alt="" loading="lazy">
+        <p>
+          <strong>{{ site.name }}</strong><br>
+          {{ site.full_name }}<br>
+          <a href="{{ site.department.url }}">{{ site.department.name }}</a><br>
+          <a href="{{ site.institution.url }}">{{ site.institution.name }}</a>
+        </p>
+      </div>
+      {% if site.partner %}
+      <a class="footer-partner" href="{{ site.partner.url }}">
+        <img src="assets/{{ site.partner.logo }}" alt="{{ site.partner.name }}" loading="lazy">
+      </a>
+      {% endif %}
+      <ul class="footer-links">
+        <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+        <li><a href="{{ site.github }}">GitHub</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="container footer-base">
+      <span>© {{ site.year }} {{ site.name }}</span>
+      <span>{{ site.institution.name }}</span>
+    </div>
+  </footer>
+</body>
+</html>

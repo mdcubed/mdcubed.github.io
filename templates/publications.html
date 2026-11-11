@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+{% set metrics = page.metrics %}
+{% if metrics %}
+<section class="metrics" aria-label="Bibliometrics">
+  <div class="tiles">
+    {% for metric in metrics['items'] %}
+    <div class="tile">
+      <span class="tile-value">{{ metric.value }}</span>
+      <span class="tile-label">{{ metric.label }}</span>
+      <span class="tile-note">{{ metric.recent }} {{ metrics.recent_label }}</span>
+    </div>
+    {% endfor %}
+  </div>
+  <p class="source">{{ metrics.source }}, {{ metrics.as_of }}. <a href="{{ metrics.url }}">Current figures on {{ metrics.source }}</a></p>
+</section>
+{% endif %}
+
+{% for heading, groups in [('Peer-reviewed articles', articles), ('Preprints', preprints)] %}
+{% if groups %}
+<section class="pub-section">
+  <h2>{{ heading }}</h2>
+  {% for year, pubs in groups %}
+  <div class="pub-year-group">
+    <p class="pub-year-label">{{ year }}</p>
+    <ol class="pub-list pub-list-grouped">
+      {% for pub in pubs %}
+      {% include "_publication.html" %}
+      {% endfor %}
+    </ol>
+  </div>
+  {% endfor %}
+</section>
+{% endif %}
+{% endfor %}
+{% endblock %}

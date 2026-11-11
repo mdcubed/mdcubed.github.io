@@ -1,0 +1,23 @@
+# Site-wide settings: name, contact details, and the navigation menu.
+name: MD³ Group
+full_name: Mechanistic Drug Design and Discovery
+description: We combine structure-based drug design, molecular simulations, and free-energy methods to understand molecular mechanisms and guide therapeutic discovery.
+email: mdcubed.ucph@gmail.com
+github: https://github.com/mdcubed
+
+institution:
+  name: University of Copenhagen
+  url: https://www.ku.dk/en
+department:
+  name: Department of Drug Design and Pharmacology
+  url: https://drug.ku.dk/
+country: Denmark
+
+# Menu order. Each entry is a file in content/ (research -> content/research.md).
+nav: [research, people, publications, news, join, contact]
+
+# Shown in the footer.
+partner:
+  name: CPDSE — Center for Pharmaceutical Data Science Education
+  url: https://cpdse.dk/
+  logo: cpdse-logo.svg

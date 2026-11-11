@@ -1,9 +1,124 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>News | MD³ Group</title><meta name="description" content="We combine structure-based drug design, molecular simulations, and free-energy methods to understand molecular mechanisms and guide therapeutic discovery.">
-<meta name="theme-color" content="#345b76"><meta property="og:title" content="News | MD³ Group"><meta property="og:description" content="We combine structure-based drug design, molecular simulations, and free-energy methods to understand molecular mechanisms and guide therapeutic discovery.">
-<link rel="icon" href="assets/md3-logo.png"><link rel="stylesheet" href="assets/style.css"><script defer src="assets/main.js"></script></head>
-<body><a class="skip" href="#main">Skip to content</a><div class="institution-bar"><div class="container"><a href="https://www.ku.dk/en">UNIVERSITY OF COPENHAGEN</a> <span><a href="https://drug.ku.dk/">DEPARTMENT OF DRUG DESIGN AND PHARMACOLOGY</a></span></div></div>
-<header class="container header"><a class="brand" href="index.html" aria-label="MD³ Group home"><img class="brand-lockup" src="assets/md3-name-transparent.png" width="1772" height="888" alt="MD³ Group — Mechanistic Drug Design and Discovery"></a>
-<button class="menu-toggle" aria-expanded="false" aria-controls="navigation">Menu <span aria-hidden="true">☰</span></button><nav id="navigation" aria-label="Main navigation"><a href="research.html" >Research</a><a href="people.html" >People</a><a href="publications.html" >Publications</a><a href="news.html" aria-current="page">News</a><a href="join.html" >Join</a><a href="contact.html" >Contact</a></nav></header>
-<main id="main"><section class="container interior section"><p class="eyebrow">From the group</p><h1>News &amp; updates.</h1><div class="notice"><h2>Watch this space</h2><p>Research highlights, group updates, and announcements will appear here.</p></div></section></main><footer><div class="container footer-inner"><div><a class="footer-brand" href="index.html"><img src="assets/md3-name-transparent.png" width="1772" height="888" alt="MD³ Group — Mechanistic Drug Design and Discovery" loading="lazy"></a><p>Mechanistic Drug Design and Discovery<br><a href="https://drug.ku.dk/">Department of Drug Design and Pharmacology</a><br><a href="https://www.ku.dk/en">University of Copenhagen</a></p></div><div class="footer-community"><a class="cpdse-logo" href="https://cpdse.dk/"><img src="assets/logo_cpdse.png" alt="CPDSE — Center for Pharmaceutical Data Science Education" loading="lazy"></a><a class="community-link" href="https://cpdse.dk/">Pharmaceutical data science education ↗</a></div><div class="footer-links"><a href="contact.html">Contact</a><a href="https://github.com/mdcubed">GitHub ↗</a><span>© 2026 MD³ Group</span></div></div></footer></body></html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>News | MD³ Group</title>
+  <meta name="description" content="Research highlights, group updates, and announcements.">
+  <meta name="theme-color" content="#0B1A33">
+  <meta property="og:title" content="News | MD³ Group">
+  <meta property="og:description" content="Research highlights, group updates, and announcements.">
+  <script>
+    /* Light is the default (data-theme on <html>); a visitor who picked the dark theme keeps it.
+       To make dark the default instead, swap 'light' and 'dark' here and on the <html> tag. */
+    try {
+      document.documentElement.dataset.theme = localStorage.getItem('theme') === 'dark' ? 'dark' : 'light';
+    } catch (e) {}
+  </script>
+  <link rel="icon" type="image/svg+xml" href="assets/logo/md3-mark-solid.svg">
+  <link rel="stylesheet" href="assets/style.css">
+  <script defer src="assets/main.js"></script>
+</head>
+<body class="page-news">
+  <a class="skip" href="#main">Skip to content</a>
+
+  <div class="ramp" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="MD³ Group home">
+        <img class="only-dark" src="assets/logo/md3-mark-dark.svg" width="624" height="716" alt="">
+        <img class="only-light" src="assets/logo/md3-mark-blue.svg" width="624" height="716" alt="">
+        <span class="brand-text">
+          <span class="brand-name">MD<sup>3</sup> Group</span>
+          <span class="brand-sub">Mechanistic Drug Design and Discovery</span>
+        </span>
+      </a>
+      <button class="theme-toggle" type="button" hidden></button>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="navigation">Menu</button>
+      <nav id="navigation" aria-label="Main navigation">
+        <a href="research.html">Research</a>
+        <a href="people.html">People</a>
+        <a href="publications.html">Publications</a>
+        <a href="news.html" aria-current="page">News</a>
+        <a href="join.html">Join</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-head band-b">
+      <div class="container">
+        <div>
+          <p class="eyebrow">From the group</p>
+          <h1>News</h1>
+<p class="lead">Research highlights, group updates, and announcements.</p>        </div>
+      </div>
+    </section>
+    <div class="container page-body">
+<div class="news-list">
+  <article class="news-item" id="2026-11-11-ucph-qligfep-qresfep">
+    <p class="news-date">11 November 2026</p>
+    <div>
+      <h2>A UCPH version of QligFEP and QresFEP</h2>
+      <div class="prose"><p>We are developing our own customized version of the Q free-energy workflows <strong>QligFEP</strong> and <strong>QresFEP</strong> at the University of Copenhagen, now with physics adjustments and support for the Amber14sb force field in QresFEP, matching QligFEP.</p>
+<p>The code is open: <a href="https://github.com/mdcubed/Q">github.com/mdcubed/Q</a>.</p></div>
+    </div>
+  </article>
+  <article class="news-item" id="2026-10-30-isbuc-poster-awards">
+    <p class="news-date">30 October 2026</p>
+    <div>
+      <h2>Two poster awards at the ISBUC annual meeting</h2>
+      <div class="prose"><p>Icaro Ariel Simon and Pablo Baceiredo Macho each received a 2026 Junior ISBUC Poster Award at the annual meeting of ISBUC, the Integrative Structural Biology cluster at the University of Copenhagen.</p>
+<p>Icaro presented the work on the hydrophobic tunnel of the 5-HT2A receptor, now published in the <a href="https://doi.org/10.1021/acs.jmedchem.6c01973">Journal of Medicinal Chemistry</a>. Pablo presented his project on dopamine receptor signaling.</p>
+<p>Thank you to our collaborators on both projects, and to the ISBUC organisers and judges.</p>
+<p><img alt="Pablo Baceiredo Macho and Icaro Ariel Simon holding their 2026 Junior ISBUC Poster Award certificates in front of a poster" src="assets/news/isbuc-poster-awards-2026.jpg" /></p></div>
+    </div>
+  </article>
+  <article class="news-item" id="2026-10-29-julien-thesis-defence">
+    <p class="news-date">29 October 2026</p>
+    <div>
+      <h2>Julien defends his master’s thesis with the highest grade</h2>
+      <div class="prose"><p>Julien Reißmann defended his master’s thesis on ligand-dependent signaling in class B incretin GPCRs on 29 October and was awarded the highest grade. Congratulations, Julien!</p>
+<p>Julien now continues in the group as a guest researcher.</p></div>
+    </div>
+  </article>
+  <article class="news-item" id="2026-10-15-pablo-starts-phd">
+    <p class="news-date">15 October 2026</p>
+    <div>
+      <h2>Pablo starts his PhD</h2>
+      <div class="prose"><p>Pablo Baceiredo Macho, until now a research assistant in the group, started as a PhD student on 15 October. His project connects molecular dynamics simulations with machine learning to predict ligand- and variant-specific GPCR signaling.</p></div>
+    </div>
+  </article>
+</div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-about">
+        <img class="footer-mark" src="assets/logo/md3-mark-dark.svg" width="624" height="716" alt="" loading="lazy">
+        <p>
+          <strong>MD³ Group</strong><br>
+          Mechanistic Drug Design and Discovery<br>
+          <a href="https://drug.ku.dk/">Department of Drug Design and Pharmacology</a><br>
+          <a href="https://www.ku.dk/en">University of Copenhagen</a>
+        </p>
+      </div>
+      <a class="footer-partner" href="https://cpdse.dk/">
+        <img src="assets/cpdse-logo.svg" alt="CPDSE — Center for Pharmaceutical Data Science Education" loading="lazy">
+      </a>
+      <ul class="footer-links">
+        <li><a href="mailto:mdcubed.ucph@gmail.com">mdcubed.ucph@gmail.com</a></li>
+        <li><a href="https://github.com/mdcubed">GitHub</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="container footer-base">
+      <span>© 2026 MD³ Group</span>
+      <span>University of Copenhagen</span>
+    </div>
+  </footer>
+</body>
+</html>
