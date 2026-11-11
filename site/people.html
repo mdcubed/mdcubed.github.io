@@ -3,10 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>People | MD³ Group</title>
+  <title>People | MD³ Group — Computational Pharmacology</title>
   <meta name="description" content="The researchers connecting molecular mechanisms to drug discovery at MD³.">
   <meta name="theme-color" content="#0B1A33">
-  <meta property="og:title" content="People | MD³ Group">
+  <meta property="og:title" content="People | MD³ Group — Computational Pharmacology">
+  <meta property="og:site_name" content="MD³ Group — Computational Pharmacology">
   <meta property="og:description" content="The researchers connecting molecular mechanisms to drug discovery at MD³.">
   <script>
     /* Light is the default (data-theme on <html>); a visitor who picked the dark theme keeps it.
@@ -14,6 +15,13 @@
     try {
       document.documentElement.dataset.theme = localStorage.getItem('theme') === 'dark' ? 'dark' : 'light';
     } catch (e) {}
+  </script>
+  <script type="application/ld+json">
+    {"@context": "https://schema.org", "@type": "ResearchOrganization",
+     "name": "MD\u00b3 Group",
+     "alternateName": ["Computational Pharmacology", "Mechanistic Drug Design and Discovery"],
+     "url": "https://mdcubed.github.io/", "email": "mdcubed.ucph@gmail.com", "sameAs": ["https://github.com/mdcubed"],
+     "parentOrganization": {"@type": "CollegeOrUniversity", "name": "University of Copenhagen", "url": "https://www.ku.dk/en"}}
   </script>
   <link rel="icon" type="image/svg+xml" href="assets/logo/md3-mark-solid.svg">
   <link rel="stylesheet" href="assets/style.css">
@@ -26,12 +34,12 @@
 
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="index.html" aria-label="MD³ Group home">
+      <a class="brand" href="index.html" aria-label="MD³ Group — Computational Pharmacology, home">
         <img class="only-dark" src="assets/logo/md3-mark-dark.svg" width="624" height="716" alt="">
         <img class="only-light" src="assets/logo/md3-mark-blue.svg" width="624" height="716" alt="">
         <span class="brand-text">
           <span class="brand-name">MD<sup>3</sup> Group</span>
-          <span class="brand-sub">Mechanistic Drug Design and Discovery</span>
+          <span class="brand-sub">Computational Pharmacology</span>
         </span>
       </a>
       <button class="theme-toggle" type="button" hidden></button>
@@ -62,7 +70,7 @@
   <div class="person-bio">
     <p class="eyebrow">Principal Investigator</p>
     <h2>Icaro Ariel Simon</h2>
-    <p>Icaro is a computational pharmaceutical scientist with a PhD in Pharmaceutical Sciences from the University of Copenhagen and an MSc in Chemistry from UFRGS, Brazil. His experience spans an industrial PhD at SARomics Biostructures and postdoctoral research at Vrije Universiteit Amsterdam and the University of Copenhagen. He combines receptor pharmacology, molecular simulations, free-energy calculations, and open-source tool development.</p>
+    <p>Icaro is a computational pharmacologist with a PhD in Pharmaceutical Sciences from the University of Copenhagen and an MSc in Chemistry from UFRGS, Brazil. His experience spans an industrial PhD at SARomics Biostructures and postdoctoral research at Vrije Universiteit Amsterdam and the University of Copenhagen. He combines receptor pharmacology, molecular simulations, free-energy calculations, and open-source tool development.</p>
     <p class="person-links">
 <a class="link-arrow" href="https://github.com/IcaroSimon">GitHub</a>    </p>
   </div>
@@ -160,15 +168,20 @@
       <div class="footer-about">
         <img class="footer-mark" src="assets/logo/md3-mark-dark.svg" width="624" height="716" alt="" loading="lazy">
         <p>
-          <strong>MD³ Group</strong><br>
-          Mechanistic Drug Design and Discovery<br>
+          <strong>MD³ Group — Computational Pharmacology</strong><br>
+          MD<sup>3</sup> = Mechanistic Drug Design and Discovery<br>
           <a href="https://drug.ku.dk/">Department of Drug Design and Pharmacology</a><br>
           <a href="https://www.ku.dk/en">University of Copenhagen</a>
         </p>
       </div>
-      <a class="footer-partner" href="https://cpdse.dk/">
-        <img src="assets/cpdse-logo.svg" alt="CPDSE — Center for Pharmaceutical Data Science Education" loading="lazy">
-      </a>
+      <div class="footer-logos">
+        <a class="footer-institution" href="https://www.ku.dk/en">
+          <img src="assets/ku-seal-white.svg" alt="University of Copenhagen" width="400" height="399" loading="lazy">
+        </a>
+        <a class="footer-partner" href="https://cpdse.dk/">
+          <img src="assets/cpdse-logo.svg" alt="CPDSE — Center for Pharmaceutical Data Science Education" loading="lazy">
+        </a>
+      </div>
       <ul class="footer-links">
         <li><a href="mailto:mdcubed.ucph@gmail.com">mdcubed.ucph@gmail.com</a></li>
         <li><a href="https://github.com/mdcubed">GitHub</a></li>

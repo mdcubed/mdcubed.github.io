@@ -7,7 +7,7 @@ theme: mechanism-to-prediction
 github: https://github.com/IcaroSimon
 ---
 
-Icaro is a computational pharmaceutical scientist with a PhD in Pharmaceutical Sciences from the University of Copenhagen and an MSc in Chemistry from UFRGS, Brazil. His experience spans an industrial PhD at SARomics Biostructures and postdoctoral research at Vrije Universiteit Amsterdam and the University of Copenhagen. He combines receptor pharmacology, molecular simulations, free-energy calculations, and open-source tool development.
+Icaro is a computational pharmacologist with a PhD in Pharmaceutical Sciences from the University of Copenhagen and an MSc in Chemistry from UFRGS, Brazil. His experience spans an industrial PhD at SARomics Biostructures and postdoctoral research at Vrije Universiteit Amsterdam and the University of Copenhagen. He combines receptor pharmacology, molecular simulations, free-energy calculations, and open-source tool development.
 
 ## From molecular mechanisms to predictive drug design
 

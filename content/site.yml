@@ -1,6 +1,9 @@
 # Site-wide settings: name, contact details, and the navigation menu.
 name: MD³ Group
 full_name: Mechanistic Drug Design and Discovery
+# Short name / nickname for the group. Shown in the browser title, the home page,
+# the footer and in the data search engines read.
+short_name: Computational Pharmacology
 description: We combine structure-based drug design, molecular simulations, and free-energy methods to understand molecular mechanisms and guide therapeutic discovery.
 email: mdcubed.ucph@gmail.com
 github: https://github.com/mdcubed
@@ -8,6 +11,7 @@ github: https://github.com/mdcubed
 institution:
   name: University of Copenhagen
   url: https://www.ku.dk/en
+  logo: ku-seal-white.svg   # shown in the footer
 department:
   name: Department of Drug Design and Pharmacology
   url: https://drug.ku.dk/

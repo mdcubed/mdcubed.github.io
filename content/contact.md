@@ -4,9 +4,9 @@ label: Get in touch
 heading: Contact
 ---
 
-## MD³ Group
+## MD³ Group — Computational Pharmacology
 
-Mechanistic Drug Design and Discovery  
+MD³ = Mechanistic Drug Design and Discovery  
 [Department of Drug Design and Pharmacology](https://drug.ku.dk/)  
 [University of Copenhagen](https://www.ku.dk/en)  
 Denmark

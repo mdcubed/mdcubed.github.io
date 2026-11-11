@@ -50,6 +50,7 @@
   --text: #B9C4D8;
   --caption: #9FB4DC;
   --dim: #7F8DA8;
+  --initial: #D4AF5A;       /* the M, D, D, D of the home heading */
   --button-bg: #D4AF5A;
   --button-fg: #0B1A33;
   --button-hover: #E9CF8A;
@@ -83,6 +84,7 @@
   --text: #33415C;
   --caption: #4D5B78;
   --dim: #66728A;
+  --initial: #2E63B8;
   --button-bg: #0B1A33;
   --button-fg: #F3EEDF;
   --button-hover: #13305C;
@@ -246,6 +248,7 @@ nav#navigation a[aria-current="page"] { color: var(--heading); border-bottom-col
 .hero-inner { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 48px; align-items: center; min-height: min(640px, 78vh); }
 .hero-copy { padding: 72px 0; }
 .hero h1 { font-size: clamp(40px, 5.4vw, 70px); line-height: 1.06; letter-spacing: -1px; margin-bottom: 24px; }
+.hero h1 .initial { color: var(--initial); }
 .hero .lead { margin-bottom: 34px; }
 .actions { display: flex; align-items: center; flex-wrap: wrap; gap: 28px; }
 
@@ -419,14 +422,16 @@ tbody th { color: var(--heading); font-weight: 700; }
 /* ------------------------------------------------------------------ footer */
 
 .site-footer { background: var(--navy-deep); border-top: 1px solid var(--line); font-size: 14.5px; }
-.footer-inner { display: grid; grid-template-columns: 1.3fr 1fr auto; gap: 48px; align-items: center; padding-block: 48px 40px; }
+.footer-inner { display: grid; grid-template-columns: 1.1fr 1.2fr auto; gap: 48px; align-items: center; padding-block: 48px 40px; }
 .footer-about { display: flex; gap: 20px; align-items: flex-start; }
 .footer-mark { width: auto; height: 64px; flex: none; }
 .footer-about p { margin: 0; line-height: 1.65; }
 .footer-about strong { color: var(--heading); font-family: var(--heading-font); font-size: 16px; }
 .site-footer a { color: var(--text); text-decoration-color: rgba(159, 180, 220, 0.4); }
 .site-footer a:hover { color: var(--heading); }
-.footer-partner img { display: block; width: 260px; }
+.footer-logos { display: flex; align-items: center; flex-wrap: wrap; gap: 20px 32px; }
+.footer-institution img { display: block; width: 76px; height: 76px; }
+.footer-partner img { display: block; width: 240px; }
 .footer-links { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
 .footer-base { display: flex; justify-content: space-between; gap: 16px; padding-block: 18px 22px; border-top: 1px solid var(--line); color: var(--dim); font-size: 13px; }
 

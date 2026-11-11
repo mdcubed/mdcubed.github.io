@@ -1,5 +1,5 @@
 ---
-eyebrow: MD³ Group · University of Copenhagen
+eyebrow: MD³ Group — Computational Pharmacology
 title: Mechanistic Drug Design and Discovery
 lead: We combine structure-based drug design, molecular simulations, and free-energy methods to understand molecular mechanisms and guide therapeutic discovery.
 image: receptor.webp

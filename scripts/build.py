@@ -61,6 +61,11 @@ pages = {slug: load(CONTENT / f"{slug}.md") for slug in ["home", *site["nav"]]}
 site["nav"] = [{"slug": slug, "title": pages[slug].get("title", slug.title())} for slug in site["nav"]]
 site["year"] = datetime.date.today().year
 
+# Home heading: the capital initials (M, D, D, D) are wrapped so the stylesheet
+# can colour them, which shows where "MD³" comes from.
+pages["home"]["title_html"] = Markup(re.sub(
+    r"\b([A-Z])", r'<span class="initial">\1</span>', str(escape(pages["home"]["title"]))))
+
 # Research themes: the body may hold a "> quote" block, which is styled as a callout.
 themes = by_order(collection("research"))
 

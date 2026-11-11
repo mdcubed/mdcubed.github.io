@@ -3,10 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% if current == 'home' %}{{ site.name }} — {{ site.full_name }}{% else %}{{ page.title }} | {{ site.name }}{% endif %}</title>
+  <title>{% if current == 'home' %}{{ site.name }} — {{ site.short_name }} | {{ site.full_name }}{% else %}{{ page.title }} | {{ site.name }} — {{ site.short_name }}{% endif %}</title>
   <meta name="description" content="{{ page.lead or site.description }}">
   <meta name="theme-color" content="#0B1A33">
-  <meta property="og:title" content="{{ page.title }} | {{ site.name }}">
+  <meta property="og:title" content="{{ page.title }} | {{ site.name }} — {{ site.short_name }}">
+  <meta property="og:site_name" content="{{ site.name }} — {{ site.short_name }}">
   <meta property="og:description" content="{{ page.lead or site.description }}">
   <script>
     /* Light is the default (data-theme on <html>); a visitor who picked the dark theme keeps it.
@@ -14,6 +15,13 @@
     try {
       document.documentElement.dataset.theme = localStorage.getItem('theme') === 'dark' ? 'dark' : 'light';
     } catch (e) {}
+  </script>
+  <script type="application/ld+json">
+    {"@context": "https://schema.org", "@type": "ResearchOrganization",
+     "name": {{ site.name | tojson }},
+     "alternateName": [{{ site.short_name | tojson }}, {{ site.full_name | tojson }}],
+     "url": "https://mdcubed.github.io/", "email": {{ site.email | tojson }}, "sameAs": [{{ site.github | tojson }}],
+     "parentOrganization": {"@type": "CollegeOrUniversity", "name": {{ site.institution.name | tojson }}, "url": {{ site.institution.url | tojson }}}}
   </script>
   <link rel="icon" type="image/svg+xml" href="assets/logo/md3-mark-solid.svg">
   <link rel="stylesheet" href="assets/style.css">
@@ -26,12 +34,12 @@
 
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="index.html" aria-label="{{ site.name }} home">
+      <a class="brand" href="index.html" aria-label="{{ site.name }} — {{ site.short_name }}, home">
         <img class="only-dark" src="assets/logo/md3-mark-dark.svg" width="624" height="716" alt="">
         <img class="only-light" src="assets/logo/md3-mark-blue.svg" width="624" height="716" alt="">
         <span class="brand-text">
           <span class="brand-name">MD<sup>3</sup> Group</span>
-          <span class="brand-sub">{{ site.full_name }}</span>
+          <span class="brand-sub">{{ site.short_name }}</span>
         </span>
       </a>
       <button class="theme-toggle" type="button" hidden></button>
@@ -67,17 +75,24 @@
       <div class="footer-about">
         <img class="footer-mark" src="assets/logo/md3-mark-dark.svg" width="624" height="716" alt="" loading="lazy">
         <p>
-          <strong>{{ site.name }}</strong><br>
-          {{ site.full_name }}<br>
+          <strong>{{ site.name }} — {{ site.short_name }}</strong><br>
+          MD<sup>3</sup> = {{ site.full_name }}<br>
           <a href="{{ site.department.url }}">{{ site.department.name }}</a><br>
           <a href="{{ site.institution.url }}">{{ site.institution.name }}</a>
         </p>
       </div>
-      {% if site.partner %}
-      <a class="footer-partner" href="{{ site.partner.url }}">
-        <img src="assets/{{ site.partner.logo }}" alt="{{ site.partner.name }}" loading="lazy">
-      </a>
-      {% endif %}
+      <div class="footer-logos">
+        {% if site.institution.logo %}
+        <a class="footer-institution" href="{{ site.institution.url }}">
+          <img src="assets/{{ site.institution.logo }}" alt="{{ site.institution.name }}" width="400" height="399" loading="lazy">
+        </a>
+        {% endif %}
+        {% if site.partner %}
+        <a class="footer-partner" href="{{ site.partner.url }}">
+          <img src="assets/{{ site.partner.logo }}" alt="{{ site.partner.name }}" loading="lazy">
+        </a>
+        {% endif %}
+      </div>
       <ul class="footer-links">
         <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
         <li><a href="{{ site.github }}">GitHub</a></li>
