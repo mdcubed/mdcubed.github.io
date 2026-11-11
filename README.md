@@ -138,8 +138,7 @@ In the repository's **Settings → Pages**, the source must be **GitHub Actions*
   abbreviated author lists and the shared-first-author note are as supplied.
 - `assets/cpdse-logo.svg` is the official wide gold CPDSE logo from
   https://cpdse.dk/assets/logo_wide_gold.svg, unmodified.
-- `assets/ku-seal-white.svg` is the University of Copenhagen seal from Wikimedia
-  Commons (`File:Ku-ucph-logo-svg.svg`, CC BY-SA 4.0), recoloured from red to
-  white for the navy footer. Replace it with the official file from the KU design
-  guide if you have one.
+- `assets/ku-seal-white.svg` is the white University of Copenhagen seal that the
+  university uses in its own page footers (`docs/images/footersegl.svg` in
+  github.com/ku-kom/bootstrap), unmodified.
 - `assets/receptor.webp` is a web-sized copy of the group's receptor render.

@@ -7,6 +7,7 @@ Content lives in content/ (Markdown + a little YAML), page layouts in
 templates/, styling in assets/style.css. See README.md.
 """
 import datetime
+import hashlib
 import re
 import shutil
 import sys
@@ -124,7 +125,11 @@ def build():
     env = Environment(loader=FileSystemLoader(ROOT / "templates"),
                       autoescape=select_autoescape(["html"]),
                       trim_blocks=True, lstrip_blocks=True)
-    shared = dict(site=site, themes=themes, people=people, news=news,
+    # Changes whenever the stylesheet or script changes, so browsers never show a
+    # new page with an old, cached stylesheet.
+    version = hashlib.md5(b"".join((ROOT / "assets" / name).read_bytes()
+                                   for name in ("style.css", "main.js"))).hexdigest()[:8]
+    shared = dict(version=version, site=site, themes=themes, people=people, news=news,
                   publications=publications,
                   articles=by_year("article"), preprints=by_year("preprint"))
 

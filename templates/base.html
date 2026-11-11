@@ -24,8 +24,8 @@
      "parentOrganization": {"@type": "CollegeOrUniversity", "name": {{ site.institution.name | tojson }}, "url": {{ site.institution.url | tojson }}}}
   </script>
   <link rel="icon" type="image/svg+xml" href="assets/logo/md3-mark-solid.svg">
-  <link rel="stylesheet" href="assets/style.css">
-  <script defer src="assets/main.js"></script>
+  <link rel="stylesheet" href="assets/style.css?v={{ version }}">
+  <script defer src="assets/main.js?v={{ version }}"></script>
 </head>
 <body class="page-{{ current }}">
   <a class="skip" href="#main">Skip to content</a>
@@ -35,8 +35,8 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html" aria-label="{{ site.name }} — {{ site.short_name }}, home">
-        <img class="only-dark" src="assets/logo/md3-mark-dark.svg" width="624" height="716" alt="">
-        <img class="only-light" src="assets/logo/md3-mark-blue.svg" width="624" height="716" alt="">
+        <img class="only-dark" src="assets/logo/md3-mark-dark.svg" width="42" height="48" alt="">
+        <img class="only-light" src="assets/logo/md3-mark-blue.svg" width="42" height="48" alt="">
         <span class="brand-text">
           <span class="brand-name">MD<sup>3</sup> Group</span>
           <span class="brand-sub">{{ site.short_name }}</span>
@@ -73,7 +73,7 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-about">
-        <img class="footer-mark" src="assets/logo/md3-mark-dark.svg" width="624" height="716" alt="" loading="lazy">
+        <img class="footer-mark" src="assets/logo/md3-mark-dark.svg" width="63" height="72" alt="" loading="lazy">
         <p>
           <strong>{{ site.name }} — {{ site.short_name }}</strong><br>
           MD<sup>3</sup> = {{ site.full_name }}<br>
@@ -81,23 +81,21 @@
           <a href="{{ site.institution.url }}">{{ site.institution.name }}</a>
         </p>
       </div>
-      <div class="footer-logos">
-        {% if site.institution.logo %}
-        <a class="footer-institution" href="{{ site.institution.url }}">
-          <img src="assets/{{ site.institution.logo }}" alt="{{ site.institution.name }}" width="400" height="399" loading="lazy">
-        </a>
-        {% endif %}
-        {% if site.partner %}
-        <a class="footer-partner" href="{{ site.partner.url }}">
-          <img src="assets/{{ site.partner.logo }}" alt="{{ site.partner.name }}" loading="lazy">
-        </a>
-        {% endif %}
-      </div>
+      {% if site.partner %}
+      <a class="footer-partner" href="{{ site.partner.url }}">
+        <img src="assets/{{ site.partner.logo }}" alt="{{ site.partner.name }}" width="240" height="44" loading="lazy">
+      </a>
+      {% endif %}
       <ul class="footer-links">
         <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
         <li><a href="{{ site.github }}">GitHub</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
+      {% if site.institution.logo %}
+      <a class="footer-institution" href="{{ site.institution.url }}">
+        <img src="assets/{{ site.institution.logo }}" alt="{{ site.institution.name }}" width="72" height="72" loading="lazy">
+      </a>
+      {% endif %}
     </div>
     <div class="container footer-base">
       <span>© {{ site.year }} {{ site.name }}</span>
